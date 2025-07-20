@@ -5,7 +5,7 @@ import { useDeferredValue, useEffect, useState } from 'react';
 export const useCards = () => {
   const [skip, setSkip] = useState(10);
   const { data, isLoading } = useGetCardsQuery({ limit: 10, skip: skip });
-  const { isIntersecting, observerRef } = useIntersection();
+  const { isIntersecting, observerRef } = useIntersection({rootMargin: '0px 500px'});
 
   useEffect(() => {
     if (isIntersecting && !isLoading ) { 

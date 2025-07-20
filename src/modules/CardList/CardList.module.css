@@ -8,10 +8,10 @@
 }
 
 .card_list_container {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
 }
 
 .card_list_tags {
